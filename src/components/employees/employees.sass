@@ -11,10 +11,6 @@
         border-radius: 5px
         width: 25%
         float: left
-        position: sticky
-        top: 0
-        // height: 500px
-        // overflow: auto
 
         h2
             margin-left: 25px
@@ -27,7 +23,6 @@
             margin-left: 25px
 
     .allEmployeesList
-        // background-color: #e6e2664c
         width: 75%
         float: left
 
@@ -35,7 +30,6 @@
             margin-left: 25px
 
         .letterCards-wrapper
-            // padding: 0 25px
             display: flex
             flex-wrap: wrap
 
@@ -46,7 +40,6 @@
             display: block
             position: relative
             text-decoration: none
-            // flex-grow: 1
             flex-basis: 25%
 
             border-radius: 5px
@@ -80,3 +73,45 @@
         background-color: $text-secondary-color
         height: 2px
         margin: 50px 0
+
+@media screen and (max-width: 2000px)
+    .employeesBlock
+        .allEmployeesList
+            &-letterCard
+                flex-basis: 25%
+
+@media screen and (max-width: 1000px)
+    .employeesBlock
+        .allEmployeesList
+            &-letterCard
+                flex-basis: 33%
+
+@media screen and (max-width: 800px)
+
+    .employeesBlock
+        .activeEmployeesList
+            width: 100%
+            float: none
+
+        .allEmployeesList
+            width: 100%
+            float: none
+            justify-content: space-between
+
+            &-letterCard
+                flex-basis: 40%
+
+@media screen and (max-width: 500px)
+
+    .employeesBlock
+        .activeEmployeesList
+            width: 100%
+            float: none
+
+        .allEmployeesList
+            width: 100%
+            float: none
+            justify-content: space-between
+
+            &-letterCard
+                flex-basis: 100%
