@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yalantis-test-project/static/css/main.daf31a33.chunk.css",
+    "main.js": "/yalantis-test-project/static/js/main.b4e4d98f.chunk.js",
+    "main.js.map": "/yalantis-test-project/static/js/main.b4e4d98f.chunk.js.map",
+    "runtime-main.js": "/yalantis-test-project/static/js/runtime-main.05960a08.js",
+    "runtime-main.js.map": "/yalantis-test-project/static/js/runtime-main.05960a08.js.map",
+    "static/js/2.ee7d4e03.chunk.js": "/yalantis-test-project/static/js/2.ee7d4e03.chunk.js",
+    "static/js/2.ee7d4e03.chunk.js.map": "/yalantis-test-project/static/js/2.ee7d4e03.chunk.js.map",
+    "index.html": "/yalantis-test-project/index.html",
+    "static/css/main.daf31a33.chunk.css.map": "/yalantis-test-project/static/css/main.daf31a33.chunk.css.map",
+    "static/js/2.ee7d4e03.chunk.js.LICENSE.txt": "/yalantis-test-project/static/js/2.ee7d4e03.chunk.js.LICENSE.txt",
+    "static/media/app.sass": "/yalantis-test-project/static/media/SFUIDisplay-Semibold.d3f53e85.woff2",
+    "static/media/loading.73122c71.gif": "/yalantis-test-project/static/media/loading.73122c71.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05960a08.js",
+    "static/js/2.ee7d4e03.chunk.js",
+    "static/css/main.daf31a33.chunk.css",
+    "static/js/main.b4e4d98f.chunk.js"
+  ]
+}
