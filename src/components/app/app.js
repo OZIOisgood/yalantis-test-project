@@ -37,10 +37,11 @@ export default class App extends Component {
                             </Route>
 
                             <Route path="*">
-                                <ErrorPage
+                                <Employees/>
+                                {/* <ErrorPage
                                     error='Attention! An error was detected'
                                     description='No page was found on the site at this address, or you do not have access to view information at this address.'
-                                />
+                                /> */}
                             </Route>
                         </Switch>
                     </main>
