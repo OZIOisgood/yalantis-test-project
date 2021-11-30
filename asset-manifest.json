@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/yalantis-test-project/static/css/main.5ccf576f.chunk.css",
-    "main.js": "/yalantis-test-project/static/js/main.28a72579.chunk.js",
-    "main.js.map": "/yalantis-test-project/static/js/main.28a72579.chunk.js.map",
+    "main.js": "/yalantis-test-project/static/js/main.3898bfe6.chunk.js",
+    "main.js.map": "/yalantis-test-project/static/js/main.3898bfe6.chunk.js.map",
     "runtime-main.js": "/yalantis-test-project/static/js/runtime-main.05960a08.js",
     "runtime-main.js.map": "/yalantis-test-project/static/js/runtime-main.05960a08.js.map",
     "static/js/2.3e232ec1.chunk.js": "/yalantis-test-project/static/js/2.3e232ec1.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.05960a08.js",
     "static/js/2.3e232ec1.chunk.js",
     "static/css/main.5ccf576f.chunk.css",
-    "static/js/main.28a72579.chunk.js"
+    "static/js/main.3898bfe6.chunk.js"
   ]
 }
