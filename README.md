@@ -39,32 +39,62 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# Тестове завдання для Yalantis React.js School #5
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Виконане тестове відправляйте куратору школи на education@yalantis.net  до 24.11.21 включно.
+Обов'язково вкажіть своє прізвище та зазначте тему листа "{Прізвище} Тестове завдання для Yalantis React.js School". 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Tech Stack: React + Axios/Fetch
+Задача: 
+GET: `https://yalantis-react-school-api.yalantis.com/api/task0/users` повертає масив юзерів. У кожного юзера є наступні поля: id, firstName, lastName, dob (дата народження).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Реалізувати:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Завантажити список співробітників з сервера, при потраплянні на сторінку  employees (сторінка /employees буде відкриватися відразу, навігації робити не потрібно).
+Відобразити англійський алфавіт.
+Співробітник  = FirstName + LastName. Відобразити співробітників, за алфавітом, сортуємо за firstName. Якщо у літери немає співробітників, ставимо «No Employees». Біля кожного співробітника є по 2 RadioButton. По дефолту ‘not active’ (не активний), значення цього radio item буде = false
+Якщо хочемо вибирати співробітника, натискаємо на ‘active’,  зі значенням = true. Обраний співробітник повинен бути виділений синім кольором.
+У правій частині сторінки є блок Employees birthday, в якому відображаються обрані співробітники, згруповані за назвою місяця їх дня народження та відсортовані по їх lastName (від А до Я). 
+Місяці повинні починатися з місяця виконання цього завдання і далі по черзі.
+Якщо в місяці немає обраних співробітників/співробітника - виводимо назву місяця з текстом «No Employees».
+Якщо ви не обрали нікого зі співробітників, то в блоці Employees birthday пишемо Employees List is empty
+Якщо сторінку перезавантажено - обрані співробітники в правому блоку повинні бути збережені. А в лівому блоку Employees, у даних співробітників повинен бути активним radio item ‘active’ та виділено синім кольором їх Fisrst Name + Last Name.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Вимоги до коду:
+Використання Prettier.
+Використання функціональних компонентів та хуків, ES6 features.
+Мінімальний розподіл проекту на логічні частини / папки.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Вимоги до проекту:
+Розгорнути додаток, використовуючи create-react-app. 
+Створити публічний репозиторій на Github для проекту.
+Використовувати UI ліби в проекті заборонено.
+UI частина додатку залишається на ваш розсуд. Макет-шаблон, як повинно виглядати, ви знайдете нижче.                                                                                                                                                                                                        
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Задеплоїти виконане завдання за допомогою Github page
+
+Буде плюсом:
+Використання Redux (redux-toolkit, redux-thunk/saga) та/або React Context в проекті.
+Використання TypeScript або опис типізація за допомогою PropTypes.
+Мінімально покрити unit-тестами логічні частини в проекті.
+
+
+ВАЖЛИВО! Якщо робота за функціоналом або візуально не відповідає ТЗ, описаному вище, вона не буде перевірятися.
+
+
+Виконане завдання надіслати куратору школи на пошту education@yalantis.net з двома лінками: 
+Link на GitHub репозиторій 
+Link на GitHub Page.
+
+
+
+Зверніть увагу! Фідбек по тестовому вам повідомлять до 02.12.21 включно.
+
+Ми залишаємо за собою право відмовитись давати докладний фідбек по тестовому завданню.
