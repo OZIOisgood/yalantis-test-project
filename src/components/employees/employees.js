@@ -29,7 +29,7 @@ export default class Employees extends Component {
       requestStr: "/task0/users",
     };
 
-    this.onChangeValue = this.onChangeValue.bind(this);
+    // this.onChangeValue = this.onChangeValue.bind(this);
   }
 
   setState(state) {
@@ -51,7 +51,7 @@ export default class Employees extends Component {
     });
   }
 
-  onChangeValue(e) {
+  onChangeValue = (e) => {
     let newData = this.state.data;
 
     let employee = newData.find((value) => value.id === e.target.name);
@@ -64,15 +64,28 @@ export default class Employees extends Component {
 
   render() {
     const { data, monthNames, bigLetters, lang, requestStr } = this.state;
-
-    // Getting data from api by request string
-    if (this.state.loading) this.updateData(requestStr);
-
-    // Show loading gif
+    
     if (this.state.loading) {
+      // Getting data from api by request string
+      this.updateData(requestStr);
+
+      const thisMonth = new Date(Date.now()).toLocaleDateString(lang, {
+        month: "long",
+      });
+
+      // Sort moths from current month
+      while (monthNames[0] !== thisMonth) monthNames.push(monthNames.shift());
+
+      // Show loading gif
       return (
-        <div className="loading-wrapper">
-          <img src={loadingGIF} className="loading" alt="Loading gif" />
+        <div className="employeesBlock">
+          <h1>Employees page</h1>
+  
+          <hr />
+          
+          <div className="loading-wrapper">
+            <img src={loadingGIF} className="loading" alt="Loading gif" />
+          </div>
         </div>
       );
     }
@@ -130,7 +143,8 @@ export default class Employees extends Component {
           );
 
           filteredEmployeesList.push(
-            <div className="allEmployeesList-letterCard-employeesList-item">
+            <li className="allEmployeesList-letterCard-employeesList-item"
+              key={`letter-${id}`}>
               {wrappedEmployee}
               <form>
                 <input
@@ -151,19 +165,21 @@ export default class Employees extends Component {
                 active <br />
                 <br />
               </form>
-            </div>
+            </li>
           );
         }
 
       return (
         <div className="allEmployeesList-letterCard">
-          <h3>{character}</h3>
-          <div className="allEmployeesList-letterCard-employeesList">
+          <h3 key={`letterCharacter-${character}`}>{character}</h3>
+          <ul className="allEmployeesList-letterCard-employeesList">
             {filteredEmployeesList}
-          </div>
+          </ul>
         </div>
       );
     });
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Sorting active employees by lastname and filtering by month of birth
     const activeEmployees = data
@@ -181,13 +197,6 @@ export default class Employees extends Component {
 
     // Making collection of monthes with filteredActiveEmployees
     const monthElements = [];
-
-    const thisMonth = new Date(Date.now()).toLocaleDateString(lang, {
-      month: "long",
-    });
-
-    // Sort moths from current month
-    while (monthNames[0] !== thisMonth) monthNames.push(monthNames.shift());
 
     for (let month of monthNames) {
       var filteredActiveEmployees = activeEmployees.filter((employee) => {
@@ -235,7 +244,7 @@ export default class Employees extends Component {
           );
         else
           for (let filteredEmployee of filteredActiveEmployees) {
-            const { firstName, lastName, dob } = filteredEmployee;
+            const { firstName, lastName, dob, id } = filteredEmployee;
             const date = new Date(Date.parse(dob));
 
             const year = date.toLocaleDateString(lang, { year: "numeric" });
@@ -243,7 +252,8 @@ export default class Employees extends Component {
             const day = date.toLocaleDateString(lang, { day: "2-digit" });
 
             filteredEmployeesList.push(
-              <li className="activeEmployeesList-monthCard-employeesList-item">
+              <li className="activeEmployeesList-monthCard-employeesList-item"
+                key={`month-${id}`}>
                 {`${firstName} ${lastName} - ${day} ${month}, ${year} year`}
               </li>
             );
@@ -251,7 +261,7 @@ export default class Employees extends Component {
 
         return (
           <div className="activeEmployeesList-monthCard">
-            <h3>{month}</h3>
+            <h3 key={`monthName-${month}`}>{month}</h3>
             <div className="activeEmployeesList-monthCard-employeesList">
               <ul>{filteredEmployeesList}</ul>
             </div>
